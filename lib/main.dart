@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
 import 'auth_screen.dart';
 import 'home_screen.dart';
+import 'categories_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,7 +59,7 @@ Widget build(BuildContext context) {
   return StreamBuilder<User?>(
   stream: FirebaseAuth.instance.authStateChanges(),
   builder: (context, snapshot) {
-  return snapshot.hasData ? const HomeScreen() : const AuthScreen();
+  return snapshot.hasData ? const CategoriesScreen() : const AuthScreen();
   },
   );
 }
