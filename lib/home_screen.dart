@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: product.imageUrl.isNotEmpty
-                          ? Image.network(product.imageUrl, fit: BoxFit.cover,
+                          ? Image.asset(product.imageUrl, fit: BoxFit.cover,
                           errorBuilder: (ctx, err, trace) => const Icon(Icons.image_not_supported, size: 50, color: Colors.grey))
                           : Container(color: Colors.grey[200], child: const Icon(Icons.shopping_bag, size: 50, color: Colors.grey)),
                     ),
